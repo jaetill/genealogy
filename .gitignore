@@ -32,6 +32,8 @@ Thumbs.db
 # GEDCOM data files (may contain personal family info)
 *.ged
 data/
+# ...but synthetic test fixtures are tracked
+!tests/fixtures/*.ged
 
 # Claude Code local settings
 .claude/settings.local.json

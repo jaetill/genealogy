@@ -6,7 +6,9 @@ authors = [
     { email = "tilley_jason@hotmail.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "ged4py>=0.5.2",
+]
 
 [build-system]
 requires = ["uv_build>=0.11.6,<0.12.0"]

@@ -12,6 +12,7 @@ from genealogy.models import (
     Source,
     Tree,
 )
+from genealogy.parser import parse_gedcom_file, parse_gedcom_string
 
 __all__ = [
     "Date",
@@ -24,4 +25,6 @@ __all__ = [
     "Sex",
     "Source",
     "Tree",
+    "parse_gedcom_file",
+    "parse_gedcom_string",
 ]

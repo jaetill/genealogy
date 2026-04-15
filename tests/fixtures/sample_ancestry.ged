@@ -1,0 +1,167 @@
+0 HEAD
+1 SOUR Ancestry.com Family Trees
+2 VERS 2026.1
+2 NAME Ancestry Family Tree
+2 CORP Ancestry.com
+1 GEDC
+2 VERS 5.5.1
+2 FORM LINEAGE-LINKED
+1 CHAR UTF-8
+1 DATE 15 APR 2026
+0 @I1@ INDI
+1 NAME John /Tilley/
+2 GIVN John
+2 SURN Tilley
+1 SEX M
+1 BIRT
+2 DATE 12 JUN 1871
+2 PLAC Richmond, Virginia, USA
+2 SOUR @S1@
+3 PAGE Registration District 42, Entry 117
+3 _APID 1,1234::567
+1 DEAT
+2 DATE 3 NOV 1942
+2 PLAC Richmond, Virginia, USA
+2 SOUR @S2@
+3 PAGE Certificate 1942-4821
+1 OCCU Farmer
+2 DATE 1910
+1 _APID 1,60525::12345
+1 FAMS @F1@
+0 @I2@ INDI
+1 NAME Martha /Jackson/
+2 GIVN Martha
+2 SURN Jackson
+1 SEX F
+1 BIRT
+2 DATE 20 SEP 1875
+2 PLAC Henrico County, Virginia, USA
+2 SOUR @S1@
+3 PAGE Registration District 42, Entry 128
+1 DEAT
+2 DATE ABT 1945
+2 PLAC Richmond, Virginia, USA
+1 FAMS @F1@
+0 @I3@ INDI
+1 NAME William /Tilley/
+2 GIVN William
+2 SURN Tilley
+1 SEX M
+1 BIRT
+2 DATE 14 APR 1900
+2 PLAC Richmond, Virginia, USA
+2 SOUR @S3@
+1 DEAT
+2 DATE 22 JAN 1975
+2 PLAC Norfolk, Virginia, USA
+2 SOUR @S2@
+1 CENS
+2 DATE 1920
+2 PLAC Richmond, Virginia, USA
+1 CENS
+2 DATE 1930
+2 PLAC Norfolk, Virginia, USA
+1 OCCU Shipyard worker
+2 DATE 1925
+1 IMMI
+2 DATE BEF 1920
+2 PLAC Ellis Island, New York, USA
+1 FAMC @F1@
+1 FAMS @F2@
+0 @I4@ INDI
+1 NAME Eleanor /Brown/
+2 GIVN Eleanor
+2 SURN Brown
+1 SEX F
+1 BIRT
+2 DATE 8 DEC 1903
+2 PLAC Norfolk, Virginia, USA
+1 DEAT
+2 DATE 15 MAY 1980
+2 PLAC Norfolk, Virginia, USA
+1 FAMS @F2@
+0 @I5@ INDI
+1 NAME Robert /Tilley/
+2 GIVN Robert
+2 SURN Tilley
+1 SEX M
+1 BIRT
+2 DATE 2 FEB 1930
+2 PLAC Norfolk, Virginia, USA
+2 SOUR @S3@
+1 DEAT
+2 DATE 18 OCT 2015
+2 PLAC Fairfax, Virginia, USA
+1 RESI
+2 DATE 1955
+2 PLAC Alexandria, Virginia, USA
+1 RESI
+2 DATE AFT 1970
+2 PLAC Fairfax, Virginia, USA
+1 FAMC @F2@
+1 FAMS @F3@
+0 @I6@ INDI
+1 NAME Susan /Jones/
+2 GIVN Susan
+2 SURN Jones
+1 SEX F
+1 BIRT
+2 DATE 25 MAY 1933
+2 PLAC Arlington, Virginia, USA
+1 FAMS @F3@
+0 @I7@ INDI
+1 NAME James /Tilley/
+2 GIVN James
+2 SURN Tilley
+1 SEX M
+1 BIRT
+2 DATE 4 JUL 1960
+2 PLAC Fairfax, Virginia, USA
+1 FAMC @F3@
+0 @I8@ INDI
+1 NAME Elizabeth /Tilley/
+2 GIVN Elizabeth
+2 SURN Tilley
+1 SEX F
+1 BIRT
+2 DATE 11 AUG 1963
+2 PLAC Fairfax, Virginia, USA
+1 FAMC @F3@
+0 @F1@ FAM
+1 HUSB @I1@
+1 WIFE @I2@
+1 CHIL @I3@
+1 MARR
+2 DATE 18 MAR 1898
+2 PLAC Richmond, Virginia, USA
+2 SOUR @S4@
+3 PAGE Marriage record 1898-0423
+0 @F2@ FAM
+1 HUSB @I3@
+1 WIFE @I4@
+1 CHIL @I5@
+1 MARR
+2 DATE 6 JUN 1925
+2 PLAC Norfolk, Virginia, USA
+0 @F3@ FAM
+1 HUSB @I5@
+1 WIFE @I6@
+1 CHIL @I7@
+1 CHIL @I8@
+1 MARR
+2 DATE 12 SEP 1958
+2 PLAC Arlington, Virginia, USA
+0 @S1@ SOUR
+1 TITL Virginia Birth Records, 1853-1912
+1 AUTH Virginia Department of Health
+1 PUBL Virginia State Archives
+0 @S2@ SOUR
+1 TITL Virginia Death Records, 1912-2014
+1 AUTH Virginia Department of Health
+0 @S3@ SOUR
+1 TITL Virginia Birth Records, 1912-2014
+1 AUTH Virginia Department of Health
+0 @S4@ SOUR
+1 TITL Virginia Marriage Records, 1785-1940
+1 AUTH Virginia Department of Health
+0 TRLR
