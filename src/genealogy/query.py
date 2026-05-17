@@ -35,10 +35,7 @@ def find_by_surname(tree: Tree, surname: str) -> list[Person]:
     target = surname.strip().lower()
     if not target:
         return []
-    return [
-        p for p in tree.persons.values()
-        if any(n.surname.lower() == target for n in p.names)
-    ]
+    return [p for p in tree.persons.values() if any(n.surname.lower() == target for n in p.names)]
 
 
 def find_by_year(tree: Tree, year: int, event_type: EventType | None = None) -> list[Person]:
@@ -94,10 +91,7 @@ def find_living(tree: Tree) -> list[Person]:
     Naive by design — real genealogy tools supplement this with 'probably
     deceased if birth year > 120 years ago' and similar heuristics.
     """
-    return [
-        p for p in tree.persons.values()
-        if p.birth() is not None and p.death() is None
-    ]
+    return [p for p in tree.persons.values() if p.birth() is not None and p.death() is None]
 
 
 def ancestors_of(tree: Tree, person_id: str, max_generations: int = 10) -> list[Person]:

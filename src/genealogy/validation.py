@@ -71,8 +71,10 @@ def age_sanity(tree: Tree) -> list[Issue]:
         death = person.death()
         # Lifespan > MAX_REASONABLE_AGE
         if (
-            birth and death
-            and birth.date and death.date
+            birth
+            and death
+            and birth.date
+            and death.date
             and birth.date.year is not None
             and death.date.year is not None
         ):
@@ -91,8 +93,10 @@ def age_sanity(tree: Tree) -> list[Issue]:
             parent_birth = birth
             child_birth = child.birth()
             if (
-                parent_birth and child_birth
-                and parent_birth.date and child_birth.date
+                parent_birth
+                and child_birth
+                and parent_birth.date
+                and child_birth.date
                 and parent_birth.date.year is not None
                 and child_birth.date.year is not None
             ):
@@ -129,7 +133,10 @@ def missing_sources(tree: Tree) -> list[Issue]:
     issues: list[Issue] = []
     for person in tree.persons.values():
         for event in person.events:
-            if event.type in (EventType.BIRTH, EventType.DEATH, EventType.MARRIAGE) and not event.sources:
+            if (
+                event.type in (EventType.BIRTH, EventType.DEATH, EventType.MARRIAGE)
+                and not event.sources
+            ):
                 issues.append(
                     Issue(
                         severity=Severity.INFO,
