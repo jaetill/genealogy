@@ -37,3 +37,12 @@ data/
 
 # Claude Code local settings
 .claude/settings.local.json
+
+# Claude Code artifacts
+.claude/audit.log
+.claude/sessions/
+.claude/worktrees/
+.claude/settings.local.json
+
+# MkDocs build output
+site/

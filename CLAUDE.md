@@ -69,3 +69,18 @@ Claude Code / Claude Desktop (via stdio transport)
 - Ancestry scraping or unofficial API access (ToS violation risk)
 - DNA analysis (separate domain, Ancestry-only data)
 - Anything that requires Ancestry credentials or session tokens
+
+
+---
+
+## Platform inheritance
+
+This project adopts the [Agentic Dev Environment](https://github.com/jaetill/agentic-dev-environment) platform per [ADR-0001](docs/adr/0001-platform-adoption.md). Genealogy is the first **Python** project on the platform; Python-specific deviations are documented in ADR-0001.
+
+### AI configuration
+
+The platform's subagents, slash commands, and hooks are delivered via the `ai-team` plugin subscription (per workspace ADR-0015). `.claude/settings.json` retains only the plugin subscription, permissions block, and marketplace pointer.
+
+### Phase 4 lite
+
+The platform's PR-time agent workflows (claude-pr-review, claude-implementer) are Node-centric (`npm ci`). They are NOT installed on genealogy yet. Phase 4 here ships a minimal Python-adapted CI: `ci.yml` (ruff + mypy + pytest), `security-scan.yml` (gitleaks + pip-audit). When the workspace publishes Python-adapted reusable workflows, genealogy will switch to those.
