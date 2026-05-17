@@ -32,5 +32,5 @@ jobs:
       - run: uv sync
       - name: Audit
         run: |
-          uv export --no-hashes --format requirements-txt > /tmp/req.txt
+          uv export --no-hashes --no-emit-project --format requirements-txt > /tmp/req.txt
           uvx pip-audit --strict --requirement /tmp/req.txt
