@@ -75,8 +75,7 @@ def person_timeline(
                 spouse_id = fam.wife_id if fam.husband_id == person_id else fam.husband_id
                 spouse = tree.person(spouse_id) if spouse_id else None
                 spouse_label = (
-                    spouse.primary_name.full() if spouse and spouse.primary_name
-                    else "spouse"
+                    spouse.primary_name.full() if spouse and spouse.primary_name else "spouse"
                 )
                 entries.append(
                     TimelineEntry(

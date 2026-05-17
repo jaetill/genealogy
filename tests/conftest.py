@@ -51,8 +51,18 @@ def simple_tree() -> Tree:
         names=[Name(given="John", surname="Smith")],
         sex=Sex.MALE,
         events=[
-            Event(EventType.BIRTH, _date(1900, 3, 15), _place("Boston, MA"), sources=[_source("Birth cert I1")]),
-            Event(EventType.DEATH, _date(1970, 11, 2), _place("Boston, MA"), sources=[_source("Death cert I1")]),
+            Event(
+                EventType.BIRTH,
+                _date(1900, 3, 15),
+                _place("Boston, MA"),
+                sources=[_source("Birth cert I1")],
+            ),
+            Event(
+                EventType.DEATH,
+                _date(1970, 11, 2),
+                _place("Boston, MA"),
+                sources=[_source("Death cert I1")],
+            ),
         ],
     )
     mary = Person(
@@ -60,8 +70,18 @@ def simple_tree() -> Tree:
         names=[Name(given="Mary", surname="Jones")],
         sex=Sex.FEMALE,
         events=[
-            Event(EventType.BIRTH, _date(1902, 6, 20), _place("Chicago, IL"), sources=[_source("Birth cert I2")]),
-            Event(EventType.DEATH, _date(1975, 1, 8), _place("Boston, MA"), sources=[_source("Death cert I2")]),
+            Event(
+                EventType.BIRTH,
+                _date(1902, 6, 20),
+                _place("Chicago, IL"),
+                sources=[_source("Birth cert I2")],
+            ),
+            Event(
+                EventType.DEATH,
+                _date(1975, 1, 8),
+                _place("Boston, MA"),
+                sources=[_source("Death cert I2")],
+            ),
         ],
     )
 
@@ -71,8 +91,18 @@ def simple_tree() -> Tree:
         names=[Name(given="Robert", surname="Smith")],
         sex=Sex.MALE,
         events=[
-            Event(EventType.BIRTH, _date(1930, 8, 1), _place("Boston, MA"), sources=[_source("Birth cert I3")]),
-            Event(EventType.DEATH, _date(2010, 4, 12), _place("Richmond, VA"), sources=[_source("Death cert I3")]),
+            Event(
+                EventType.BIRTH,
+                _date(1930, 8, 1),
+                _place("Boston, MA"),
+                sources=[_source("Birth cert I3")],
+            ),
+            Event(
+                EventType.DEATH,
+                _date(2010, 4, 12),
+                _place("Richmond, VA"),
+                sources=[_source("Death cert I3")],
+            ),
         ],
     )
     alice = Person(
@@ -80,8 +110,18 @@ def simple_tree() -> Tree:
         names=[Name(given="Alice", surname="Brown")],
         sex=Sex.FEMALE,
         events=[
-            Event(EventType.BIRTH, _date(1932, 2, 14), _place("Philadelphia, PA"), sources=[_source("Birth cert I4")]),
-            Event(EventType.DEATH, _date(2015, 9, 3), _place("Richmond, VA"), sources=[_source("Death cert I4")]),
+            Event(
+                EventType.BIRTH,
+                _date(1932, 2, 14),
+                _place("Philadelphia, PA"),
+                sources=[_source("Birth cert I4")],
+            ),
+            Event(
+                EventType.DEATH,
+                _date(2015, 9, 3),
+                _place("Richmond, VA"),
+                sources=[_source("Death cert I4")],
+            ),
         ],
     )
 
@@ -91,7 +131,12 @@ def simple_tree() -> Tree:
         names=[Name(given="Tom", surname="Smith")],
         sex=Sex.MALE,
         events=[
-            Event(EventType.BIRTH, _date(1960, 5, 10), _place("Richmond, VA"), sources=[_source("Birth cert I5")]),
+            Event(
+                EventType.BIRTH,
+                _date(1960, 5, 10),
+                _place("Richmond, VA"),
+                sources=[_source("Birth cert I5")],
+            ),
         ],
     )
     sarah = Person(
@@ -99,7 +144,12 @@ def simple_tree() -> Tree:
         names=[Name(given="Sarah", surname="Smith")],
         sex=Sex.FEMALE,
         events=[
-            Event(EventType.BIRTH, _date(1965, 12, 1), _place("Richmond, VA"), sources=[_source("Birth cert I6")]),
+            Event(
+                EventType.BIRTH,
+                _date(1965, 12, 1),
+                _place("Richmond, VA"),
+                sources=[_source("Birth cert I6")],
+            ),
         ],
     )
 
@@ -109,14 +159,28 @@ def simple_tree() -> Tree:
         husband_id="I1",
         wife_id="I2",
         child_ids=["I3"],
-        events=[Event(EventType.MARRIAGE, _date(1925, 6, 1), _place("Boston, MA"), sources=[_source("Marriage cert F1")])],
+        events=[
+            Event(
+                EventType.MARRIAGE,
+                _date(1925, 6, 1),
+                _place("Boston, MA"),
+                sources=[_source("Marriage cert F1")],
+            )
+        ],
     )
     fam2 = Family(
         id="F2",
         husband_id="I3",
         wife_id="I4",
         child_ids=["I5", "I6"],
-        events=[Event(EventType.MARRIAGE, _date(1955, 9, 20), _place("Philadelphia, PA"), sources=[_source("Marriage cert F2")])],
+        events=[
+            Event(
+                EventType.MARRIAGE,
+                _date(1955, 9, 20),
+                _place("Philadelphia, PA"),
+                sources=[_source("Marriage cert F2")],
+            )
+        ],
     )
 
     # Wire family references into persons
@@ -197,7 +261,15 @@ def broken_tree() -> Tree:
     young_parent.spouse_family_ids = ["FB1"]
     young_child.parent_family_ids = ["FB1"]
 
-    for person in (timetraveler, methuselah, undocumented, dupe_a, dupe_b, young_parent, young_child):
+    for person in (
+        timetraveler,
+        methuselah,
+        undocumented,
+        dupe_a,
+        dupe_b,
+        young_parent,
+        young_child,
+    ):
         tree.add_person(person)
     tree.add_family(fam)
     return tree
